@@ -20,3 +20,11 @@ InfinityFree biasanya memberi hostname MySQL tersendiri; jangan gunakan `localho
 - Owner: `owner` / `owner123`
 
 Ganti password awal sebelum aplikasi digunakan dengan data sungguhan.
+
+## Fitur aplikasi
+
+- **Admin:** menambah dan mengubah data member serta paket pada menu **Member & paket**.
+- **Kasir:** membuat transaksi dengan paket, jumlah, member opsional, dan catatan. Total dihitung dari harga paket di server. Detail pesanan disimpan bersama transaksi; status bergerak dari Baru, Diproses, Selesai, hingga Diambil.
+- **Owner:** melihat omzet bulanan, jumlah pesanan per status, dan transaksi terbaru. Owner hanya memiliki akses baca.
+
+Data tersimpan di MySQL: member di `tb_member`, paket di `tb_paket`, pesanan di `tb_transaksi`, dan rincian paket pesanan di `tb_detail_transaksi`.
