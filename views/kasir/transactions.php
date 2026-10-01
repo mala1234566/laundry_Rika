@@ -242,6 +242,8 @@ $flash = getFlash();
                                 <td class="text-nowrap"><?= h(rupiah($transaction['total_harga'])) ?></td>
                                 <td><span class="badge text-bg-<?= $transaction['status'] === 'selesai' || $transaction['status'] === 'diambil' ? 'success' : ($transaction['status'] === 'proses' ? 'primary' : 'secondary') ?>"><?= h(transactionStatusLabel($transaction['status'])) ?></span></td>
                                 <td class="pe-4">
+                                    <div class="d-flex flex-wrap gap-2">
+                                    <a class="btn btn-sm btn-outline-secondary text-nowrap" href="<?= h(BASE_URL) ?>views/kasir/receipt.php?id=<?= (int) $transaction['id_transaksi'] ?>"><i class="bi bi-printer me-1"></i>Cetak / PDF</a>
                                     <?php if ($_SESSION['role'] === 'owner'): ?>
                                         <span class="text-muted small">Baca saja</span>
                                     <?php elseif ($next): ?>
@@ -255,6 +257,7 @@ $flash = getFlash();
                                     <?php else: ?>
                                         <span class="text-muted small">Selesai</span>
                                     <?php endif; ?>
+                                    </div>
                                 </td>
                             </tr>
                         <?php endforeach; ?>
