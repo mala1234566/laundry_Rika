@@ -1,0 +1,8 @@
+/laravel-12/
+/database/
+/logs/*
+/config/database.local.php
+/generate_hash.php
+/.env
+/.env.*
+!/.env.example

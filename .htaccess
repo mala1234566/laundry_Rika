@@ -1,0 +1,11 @@
+DirectoryIndex index.php
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteRule ^(config|database|logs|laravel-12)(/|$) - [F,L,NC]
+    RewriteRule (^|/)\. - [F,L]
+</IfModule>
+
+<FilesMatch "^(database\.sql|generate_hash\.php)$">
+    Require all denied
+</FilesMatch>

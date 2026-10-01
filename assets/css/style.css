@@ -1,0 +1,27 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background: #f0f2f5;
+}
+
+.container {
+    background: #fff;
+    padding: 2rem 3rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,.1);
+    text-align: center;
+}
+
+.status {
+    font-size: 1.1rem;
+    font-weight: bold;
+    padding: .6rem 1.2rem;
+    border-radius: 4px;
+}
+
+.success { color: #155724; background: #d4edda; }
+.error   { color: #721c24; background: #f8d7da; }
