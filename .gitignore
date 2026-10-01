@@ -3,6 +3,7 @@
 /logs/*
 /config/database.local.php
 /generate_hash.php
+/laundry_Rika-infinityfree.zip
 /.env
 /.env.*
 !/.env.example
